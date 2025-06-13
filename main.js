@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     videoPlayer.src = url;
     videoPlayer.style.display = 'block';
     videoPlayer.load();
-    videoPlayer.play();
   };
 
   // Called by native code with error message
