@@ -14,13 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Called by native code with base64 video data
   window.displayRecordedVideo = function (base64String) {
-    feedback.textContent = '';
+    feedback.textContent = 'Video ready. Click play to watch.';
     const blob = base64ToBlob(base64String, 'video/mp4');
     const url = URL.createObjectURL(blob);
     videoPlayer.src = url;
     videoPlayer.style.display = 'block';
     videoPlayer.load();
-    videoPlayer.play();
   };
 
   // Called by native code with error message
