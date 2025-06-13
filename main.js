@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
       videoPlayer.style.display = 'none';
       videoPlayer.src = '';
     };
+
+    window.displayFeedback = function (message) {
+      feedback.textContent = message;
+      videoPlayer.style.display = 'none';
+      videoPlayer.src = '';
+    };
   
     function base64ToBlob(base64, mime) {
       const byteChars = atob(base64);
